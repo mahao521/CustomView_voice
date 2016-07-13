@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+        <variable
+            name="btnClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.puhuibao.customview_voice.MainActivity">
+
+
+        <com.puhuibao.customview_voice.utils.CustomVoiceView
+            android:id="@+id/customView"
+            android:background="#00f"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            app:bg="@mipmap/ic_launcher"
+            app:circleWidth="12dp"
+            app:dotCount="20"
+            app:firstColor="#252420"
+            app:secondColor="#FDFDFD"
+            app:splitSize="25" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+            <Button
+                android:onClick="@{btnClick}"
+                android:id="@+id/btn_add"
+                android:text="音量增加"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_marginLeft="10dp"
+                android:onClick="@{btnClick}"
+                android:id="@+id/btn_delete"
+                android:text="音量减少"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
+
